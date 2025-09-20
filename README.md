@@ -1,5 +1,8 @@
 **🍻 Introducing a Recommended Drinking Game App!! 🍻**
 
+<img width="300" height="300" alt="drinkinggame" src="https://github.com/user-attachments/assets/372d2903-92cb-4992-bb7a-aecfd4a3a64b" />
+
+
 📱 Download the app here  
 https://play.google.com/store/apps/details?id=com.mycompany.poker&hl=en
 
