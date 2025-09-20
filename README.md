@@ -1,71 +1,59 @@
-Here’s the English version of your introduction article, keeping the same markdown structure and lively tone:
+**🍻 Introducing a Recommended Drinking Game App!! 🍻**
 
-🍻 Recommended Drinking Game App!! 🍻
-
-📱 Download the app here
+📱 Download the app here  
 https://play.google.com/store/apps/details?id=com.mycompany.poker&hl=en
 
-🍻 About This App
+---
 
-“Nomou!” is a dedicated drinking game app that guarantees fun at any occasion—
-from drinking parties and mixers to house parties and even casual lunch gatherings.
+## 🍻 About This App
+**“Nomou!”** is a dedicated **drinking game app** that can liven up any occasion—  
+drinking parties, mixers, house parties, or even casual lunch gatherings.  
 
-It was developed with the low-code tool FlutterFlow and released for Android.
+It was developed with the low-code tool **FlutterFlow** and released for Android.  
 
-🎲 Mini Games You Can Play
-🔹 Classic Games
+---
 
-Tongue Twisters: Try under a time limit—thrills and laughs guaranteed
+## 🎲 Mini Games You Can Play
 
-Roulette: Perfect for deciding “who drinks” in a fair way
+### 🔹 Classics
+- **Tongue Twisters**: Take the challenge with a time limit—thrills and laughs guaranteed  
+- **Roulette**: A fair way to decide “who drinks”  
+- **Yamanote Line Game**: Topics are automatically prepared by the app—no setup needed  
+- **Minority & Majority Game**: A mind game that sparks laughter with unexpected answers  
+- **Coin Toss**: Simple yet an intense test of luck  
 
-Yamanote Line Game: The app provides topics automatically, no prep needed
+### 🔹 Originals
+- **5-Second Challenge**: A test of timing—hit exactly 5 seconds to be the hero!  
+- **Poker Lottery**: A card-style game where both luck and strategy are tested  
+- **Face Game**: Use only facial expressions to communicate—guaranteed laughter  
+- **Flip Game**: Reflexes and intuition determine the winner  
+- **Comedy Battle (Oogiri)**: Show your wit and make everyone laugh with creative answers  
 
-Minority & Majority Game: Unexpected answers spark laughter and mind games
+---
 
-Coin Toss: Simple yet exciting luck-based battle
+## 🌟 Features
+- No complicated setup or rules required  
+- Just launch the app and start playing immediately  
+- Enjoyable for a wide range of people—from college students to working adults  
+- Designed so that *everyone* becomes the main character—nobody is left out  
 
-🔹 Original Games
+---
 
-5-Second Challenge: Test your sense of time—hit it exactly to be the hero!
+## 🛠 About Development
+This app was developed using **FlutterFlow**, chosen for the following reasons:  
 
-Poker Lottery: A card-inspired game of luck and strategy
+- **Intuitive UI building** allows for speedy development  
+- **Easy Firebase integration and state management**, enabling complex game logic  
+- **Low-code flexibility** with the ability to add custom code  
 
-Face Game: Communicate only with facial expressions—guaranteed laughs
+Thanks to these strengths, we were able to release an app with multiple mini-games in a short time.  
 
-Flip Game: Quick reflexes and intuition decide the winner
+https://www.flutterflow.io/  
 
-Comedy Battle (Oogiri): Make everyone laugh with your witty answers
+---
 
-🌟 Features
+## 🥂 Final Thoughts
+**“Nomou!”** turns an ordinary drinking party into an **unforgettable event**.  
+Be sure to install it and try it out with your friends, classmates, or colleagues!  
 
-No complicated setup or rule explanations
-
-Start playing instantly—just open the app
-
-Fun for a wide range of users, from college students to working adults
-
-Designed so that everyone becomes part of the fun—nobody is left out
-
-🛠 About Development
-
-This app was created using FlutterFlow, chosen for the following reasons:
-
-Intuitive UI building, enabling fast development
-
-Easy Firebase integration and state management, perfect for game logic
-
-Low-code flexibility with the option to add custom code
-
-Thanks to these strengths, we were able to release an app packed with multiple games in a short time.
-
-https://www.flutterflow.io/
-
-🥂 Final Thoughts
-
-“Nomou!” transforms an ordinary drinking session into an unforgettable event.
-Try it out with friends, classmates, or colleagues at your next gathering!
-
-📱 Download here 👉 Google Play Store
-
-Do you want me to make this SEO-optimized for English search results (like “best drinking game app” or “party game app” keywords) so it ranks higher on Google, similar to how you asked for Zenn?
+📱 Download here 👉 [Google Play Store](https://play.google.com/store/apps/details?id=com.mycompany.poker&hl=ja)  
