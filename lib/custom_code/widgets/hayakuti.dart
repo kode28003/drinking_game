@@ -10,247 +10,10 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:auto_size_text/auto_size_text.dart';
-
+import 'package:drinking_game/custom_code/actions/show_interstitial_ad_custom.dart'
+    as actions;
 import 'dart:math';
 import 'dart:async';
-
-// class Hayakuti extends StatefulWidget {
-//   const Hayakuti({
-//     super.key,
-//     this.width,
-//     this.height,
-//   });
-
-//   final double? width;
-//   final double? height;
-
-//   @override
-//   State<Hayakuti> createState() => _HayakutiState();
-// }
-
-// class _HayakutiState extends State<Hayakuti> {
-//   // Array of Japanese tongue twisters
-//   final List<String> _tongueTwisters = [
-//     '生麦生米生卵',
-//     '隣の客はよく柿食う客だ',
-//     '赤巻紙青巻紙黄巻紙',
-//     '蛙ぴょこぴょこ三ぴょこぴょこ合わせてぴょこぴょこ六ぴょこぴょこ',
-//     '東京特許許可局長',
-//     'この釘は引き抜きにくい釘だ',
-//     '坊主が屏風に上手に坊主の絵を描いた',
-//     'スモモもモモもモモのうち',
-//     '庭には二羽鶏がいる',
-//     '老若男女にゃニャーニャー',
-//     '引き抜きにくい釘抜き',
-//     'よっぱらいが酔っぱらってよろよろと寄ってきて、よろよろよろけてよろこんだ',
-//     '今日の今日に来て今日言わなかった',
-//     '除雪車除雪作業中',
-//     '新春シャンソンショー',
-//     '隣の竹やぶに竹立てかけたのは竹立てかけたかったから竹立てかけた',
-//     '手術室、診察室、手術室',
-//     '赤パジャマ青パジャマ黄パジャマ',
-//     'かえるぴょこぴょこ三ぴょこぴょこ、あわせてぴょこぴょこ六ぴょこぴょこ',
-//     '骨粗鬆症訴訟勝訴',
-//     '美術室技術室手術室'
-//   ];
-
-//   String _currentTwister = 'スタートボタンを押して挑戦！';
-//   String _message = '';
-//   Timer? _timer;
-//   double _timeRemaining = 1.0; // Normalized value from 0.0 to 1.0
-
-//   // State to manage button and text visibility and style
-//   bool _isGameActive = false;
-//   Color _messageColor = Colors.white;
-
-//   @override
-//   void dispose() {
-//     _timer?.cancel();
-//     super.dispose();
-//   }
-
-//   // Starts the game and a new timer.
-//   void _startGame() {
-//     setState(() {
-//       _isGameActive = true;
-//       _message = '';
-//       _messageColor = Colors.white;
-
-//       // Pick a new, random tongue twister
-//       final random = Random();
-//       _currentTwister = _tongueTwisters[random.nextInt(_tongueTwisters.length)];
-//     });
-
-//     _startTimer();
-//   }
-
-//   // Resets and starts the timer based on the length of the tongue twister.
-//   void _startTimer() {
-//     _timer?.cancel();
-
-//     // Dynamic time limit calculation based on the number of characters.
-//     // A base time of 1.5 seconds + 75ms for each character.
-//     final timeLimit = 1.5 + (_currentTwister.length * 0.075);
-//     const updateInterval = Duration(milliseconds: 50);
-
-//     // Initial state of the progress bar
-//     setState(() {
-//       _timeRemaining = 1.0;
-//     });
-
-//     _timer = Timer.periodic(updateInterval, (timer) {
-//       setState(() {
-//         _timeRemaining -= updateInterval.inMilliseconds / (timeLimit * 1000);
-//       });
-
-//       if (_timeRemaining <= 0) {
-//         _timer?.cancel();
-//         _gameOver();
-//       }
-//     });
-//   }
-
-//   // Handles the "言えた！" button click.
-//   void _handleSayIt() {
-//     _timer?.cancel();
-//     _gameWin();
-//   }
-
-//   // Called when the player wins the game.
-//   void _gameWin() {
-//     setState(() {
-//       _isGameActive = false;
-//       _message = 'おめでとうございます！成功です！';
-//       _messageColor = Colors.green[300]!;
-//       _currentTwister = '素晴らしい！';
-//     });
-//   }
-
-//   // Called when the player loses the game.
-//   void _gameOver() {
-//     setState(() {
-//       _isGameActive = false;
-//       _message = '時間切れ...残念ながら失敗です';
-//       _messageColor = Colors.red[300]!;
-//       _currentTwister = 'もう一度挑戦してみますか？';
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       width: widget.width,
-//       height: widget.height,
-//       color: Color(0xFF1A5F3A), // 背景色をgreen-800に設定
-//       child: Center(
-//         child: Container(
-//           width: MediaQuery.of(context).size.width * 0.9,
-//           constraints: const BoxConstraints(maxWidth: 600),
-//           padding: const EdgeInsets.all(32.0),
-//           decoration: BoxDecoration(
-//             color: Colors.white,
-//             borderRadius: BorderRadius.circular(24.0),
-//             boxShadow: [
-//               BoxShadow(
-//                 color: Colors.black.withOpacity(0.1),
-//                 spreadRadius: 5,
-//                 blurRadius: 7,
-//                 offset: const Offset(0, 3),
-//               ),
-//             ],
-//           ),
-//           child: Column(
-//             mainAxisSize: MainAxisSize.min,
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: <Widget>[
-//               // 早口言葉ゲームのタイトルを小さくする
-//               const Text(
-//                 '早口言葉ゲーム',
-//                 style: TextStyle(
-//                   fontSize: 22,
-//                   fontWeight: FontWeight.bold,
-//                   color: Color(0xFF4a5568),
-//                 ),
-//               ),
-//               const SizedBox(height: 24),
-//               // Text(
-//               //   _currentTwister,
-//               //   textAlign: TextAlign.center,
-//               //   style: const TextStyle(
-//               //     // フォントサイズを自動調整
-//               //     fontSize: 24,
-//               //     fontWeight: FontWeight.w600,
-//               //     color: Color(0xFF2d3748),
-//               //   ),
-//               //   // 最大行数を2行に設定
-//               //   maxLines: 1,
-//               //   overflow: TextOverflow.ellipsis,
-//               // ),
-//               AutoSizeText(
-//                 _currentTwister,
-//                 textAlign: TextAlign.center,
-//                 style: const TextStyle(
-//                   fontSize: 22, // 最大フォントサイズ
-//                   fontWeight: FontWeight.w600,
-//                   color: Color(0xFF2d3748),
-//                 ),
-//                 maxLines: 2, // 最大行数
-//                 minFontSize: 8, // 最小フォントサイズ
-//                 overflow: TextOverflow.ellipsis,
-//               ),
-//               const SizedBox(height: 16),
-//               if (_isGameActive)
-//                 LinearProgressIndicator(
-//                   value: _timeRemaining,
-//                   backgroundColor: Colors.grey[200],
-//                   valueColor: AlwaysStoppedAnimation<Color>(
-//                     _timeRemaining > 0.5
-//                         ? Colors.blue[400]!
-//                         : _timeRemaining > 0.25
-//                             ? Colors.orange[400]!
-//                             : Colors.red[400]!,
-//                   ),
-//                 ),
-//               if (_isGameActive) const SizedBox(height: 16),
-//               Text(
-//                 _message,
-//                 textAlign: TextAlign.center,
-//                 style: TextStyle(
-//                   fontSize: 20,
-//                   fontWeight: FontWeight.w600,
-//                   color: _messageColor,
-//                 ),
-//               ),
-//               const SizedBox(height: 32),
-//               ElevatedButton(
-//                 onPressed: _isGameActive ? _handleSayIt : _startGame,
-//                 style: ElevatedButton.styleFrom(
-//                   backgroundColor:
-//                       _isGameActive ? Colors.blue[600] : Colors.blue[600],
-//                   padding:
-//                       const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-//                   shape: RoundedRectangleBorder(
-//                     borderRadius: BorderRadius.circular(30),
-//                   ),
-//                   shadowColor: Colors.black.withOpacity(0.3),
-//                   elevation: 6,
-//                 ),
-//                 child: Text(
-//                   _isGameActive ? '言えた！' : 'スタート',
-//                   style: const TextStyle(
-//                     fontSize: 20,
-//                     fontWeight: FontWeight.bold,
-//                     color: Colors.white,
-//                   ),
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
 
 class Hayakuti extends StatefulWidget {
   const Hayakuti({
@@ -297,7 +60,22 @@ class _HayakutiState extends State<Hayakuti> {
         '手術室、診察室、手術室',
         '赤パジャマ青パジャマ黄パジャマ',
         '骨粗鬆症訴訟勝訴',
-        '美術室技術室手術室'
+        '美術室技術室手術室',
+        '隣の客はよく柿食う客だが柿食う客はよく牡蠣食う客だ',
+        'バスガス爆発バスガス爆発バスガス爆発',
+        '貨客船の旅客と旅客機の客',
+        '青巻紙赤巻紙黄巻紙茶巻紙',
+        '隣の竹垣に竹立てかけた',
+        '肩固かったから買った肩叩き器',
+        '瓜売りが瓜売りに来て瓜売り残して瓜売り帰る',
+        '裏庭には二羽ニワトリがいる',
+        'ライスライスカレーライス',
+        'ジャズ歌手がジャズシャンソンショーでジャズを歌う',
+        '東京特許許可局で特許許可却下',
+        'マグマ大使のママとマママグマ大使',
+        'この竹垣に竹立てかけたかったから竹立てかけた',
+        '借りた皿洗う皿借りる皿',
+        '肩叩き機叩きながら語った'
       ]
     },
     'en': {
@@ -319,7 +97,22 @@ class _HayakutiState extends State<Hayakuti> {
         'Fuzzy Wuzzy was a bear. Fuzzy Wuzzy had no hair.',
         'Unique New York. Unique New York.',
         'Red lorry, yellow lorry.',
-        'Six slimy snails sailed silently.'
+        'Six slimy snails sailed silently.',
+        'I saw Susie sitting in a shoeshine shop.',
+        'Can you can a can as a canner can can a can?',
+        'I slit the sheet, the sheet I slit, and on the slitted sheet I sit.',
+        'Fred fed Ted bread and Ted fed Fred bread.',
+        'Lesser leather never weathered wetter weather better.',
+        'Nine nice night nurses nursing nicely.',
+        'Which wristwatches are Swiss wristwatches?',
+        'How can a clam cram in a clean cream can?',
+        'Near an ear, a nearer ear, a nearly eerie ear.',
+        'Six sleek swans swam swiftly southwards.',
+        'Brisk brave brigadiers brandished broad bright blades.',
+        'Irish wristwatch, Swiss wristwatch.',
+        'Four fine fresh fish for you.',
+        'Shut up the shutters and sit in the shop.',
+        'Truly rural, truly rural, truly rural.'
       ]
     },
   };
@@ -330,6 +123,7 @@ class _HayakutiState extends State<Hayakuti> {
   double _timeRemaining = 1.0;
   bool _isGameActive = false;
   Color _messageColor = Colors.white;
+  int _tryNumber = 0;
 
   String _getTranslatedText(String key) {
     final String languageCode = Localizations.localeOf(context).languageCode;
@@ -358,6 +152,11 @@ class _HayakutiState extends State<Hayakuti> {
 
   void _startGame() {
     setState(() {
+      _tryNumber++; // ★回数カウント
+      if (_tryNumber % 3 == 0) {
+        actions.showInterstitialAdCustom(); // ★3回ごとに広告
+      }
+
       _isGameActive = true;
       _message = '';
       _messageColor = Colors.white;

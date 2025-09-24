@@ -690,6 +690,25 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                                     ),
                                                   },
                                                 );
+                                              } else if (widget
+                                                      .thisGame?.thisAppNav ==
+                                                  'fruit') {
+                                                context.pushNamed(
+                                                  FruitPageWidget.routeName,
+                                                  extra: <String, dynamic>{
+                                                    kTransitionInfoKey:
+                                                        TransitionInfo(
+                                                      hasTransition: true,
+                                                      transitionType:
+                                                          PageTransitionType
+                                                              .scale,
+                                                      alignment: Alignment
+                                                          .bottomCenter,
+                                                      duration: Duration(
+                                                          milliseconds: 400),
+                                                    ),
+                                                  },
+                                                );
                                               }
 
                                               FFAppState().tryGameTime =

@@ -198,9 +198,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ja': '山手線ゲーム',
       'en': 'Yamanote Line Game',
     },
-    'jws4c1kg': {
-      'ja': 'コイントス',
-      'en': 'coin toss',
+    'yu882gci': {
+      'ja': 'フルーツと爆弾ゲーム',
+      'en': 'Fruits and Bombs Game',
     },
     'by6g8m2r': {
       'ja': '大喜利',
@@ -221,6 +221,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'c655xfec': {
       'ja': '5秒チャレンジゲーム',
       'en': 'Five Second Game',
+    },
+    'jws4c1kg': {
+      'ja': 'コイントス',
+      'en': 'coin toss',
     },
     'vwj8kkwc': {
       'ja': 'Home',
@@ -517,6 +521,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // fiveSecondPage
   {
     'lnx79ic6': {
+      'ja': 'Home',
+      'en': 'Home',
+    },
+  },
+  // fruitPage
+  {
+    'vqp4rw5b': {
       'ja': 'Home',
       'en': 'Home',
     },

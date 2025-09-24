@@ -8,3 +8,4 @@ export 'hayakuti.dart' show Hayakuti;
 export 'minority.dart' show Minority;
 export 'trump_flip_game.dart' show TrumpFlipGame;
 export 'five_second.dart' show FiveSecond;
+export 'fruit_bomb_game.dart' show FruitBombGame;

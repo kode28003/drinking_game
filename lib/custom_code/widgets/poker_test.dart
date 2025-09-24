@@ -10,6 +10,8 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'dart:math';
+import 'package:drinking_game/custom_code/actions/show_interstitial_ad_custom.dart'
+    as actions;
 
 class CardModel {
   final String suit;
@@ -148,6 +150,7 @@ class _PokerTestState extends State<PokerTest> {
   bool _gameStarted = false;
   String _gameMessage = '';
   bool _isLoading = false;
+  int _startCount = 0;
 
   String _getTranslatedText(String key) {
     final String languageCode = Localizations.localeOf(context).languageCode;
@@ -210,6 +213,7 @@ class _PokerTestState extends State<PokerTest> {
   // ゲームを開始する
   Future<void> _startGame() async {
     if (!mounted) return;
+
     setState(() {
       _isLoading = true;
       _gameMessage = _getTranslatedText('dealing_cards');

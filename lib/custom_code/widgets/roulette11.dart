@@ -12,6 +12,8 @@ import 'package:flutter/material.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'dart:ui' as ui;
+import 'package:drinking_game/custom_code/actions/show_interstitial_ad_custom.dart'
+    as actions;
 
 // class Roulette11 extends StatefulWidget {
 //   const Roulette11({
@@ -1087,6 +1089,7 @@ class _Roulette11State extends State<Roulette11>
   List<String> _selectedOptions = [];
   List<String> _customOptions = [];
   final TextEditingController _customController = TextEditingController();
+  int _spinCount = 0;
 
   final Map<String, Map<String, dynamic>> localizedStrings = {
     'ja': {
@@ -1307,9 +1310,13 @@ class _Roulette11State extends State<Roulette11>
     if (_isSpinning || _selectedOptions.isEmpty) return;
 
     setState(() {
+      _spinCount++;
       _isSpinning = true;
       _resultText = '';
     });
+    if (_spinCount % 2 == 0) {
+      actions.showInterstitialAdCustom(); // ← ここで広告を表示
+    }
 
     final angleStep = 360.0 / _selectedOptions.length;
     final finalIndex = Random().nextInt(_selectedOptions.length);
@@ -1381,6 +1388,50 @@ class _Roulette11State extends State<Roulette11>
                 ],
               ),
               const SizedBox(height: 16),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     Text(
+              //       _getTranslatedText('genre_label'),
+              //       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              //             color: Colors.white,
+              //           ),
+              //     ),
+              //     const SizedBox(width: 8),
+              //     Container(
+              //       padding: const EdgeInsets.symmetric(horizontal: 12),
+              //       decoration: BoxDecoration(
+              //         color: Colors.white,
+              //         borderRadius: BorderRadius.circular(8),
+              //       ),
+              //       child: DropdownButton<String>(
+              //         value: _currentGenre,
+              //         items: _getTranslatedGenres().keys.map((String key) {
+              //           return DropdownMenuItem<String>(
+              //             value: key,
+              //             child: Text(
+              //               _getTranslatedGenres()[key]!,
+              //               style: const TextStyle(
+              //                 fontSize: 15,
+              //                 color: Colors.black,
+              //               ),
+              //             ),
+              //           );
+              //         }).toList(),
+              //         onChanged: _isSpinning
+              //             ? null
+              //             : (newValue) {
+              //                 if (newValue != null) {
+              //                   _setGenre(newValue);
+              //                 }
+              //               },
+              //         underline: Container(),
+              //         icon: const Icon(Icons.arrow_drop_down,
+              //             color: Colors.black),
+              //       ),
+              //     ),
+              //   ],
+              // ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -1391,40 +1442,46 @@ class _Roulette11State extends State<Roulette11>
                         ),
                   ),
                   const SizedBox(width: 8),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: DropdownButton<String>(
-                      value: _currentGenre,
-                      items: _getTranslatedGenres().keys.map((String key) {
-                        return DropdownMenuItem<String>(
-                          value: key,
-                          child: Text(
-                            _getTranslatedGenres()[key]!,
-                            style: const TextStyle(
-                              fontSize: 15,
-                              color: Colors.black,
+                  Expanded(
+                    // ← 追加
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: DropdownButton<String>(
+                        isExpanded: true, // ← これがポイント
+                        value: _currentGenre,
+                        items: _getTranslatedGenres().keys.map((String key) {
+                          return DropdownMenuItem<String>(
+                            value: key,
+                            child: Text(
+                              _getTranslatedGenres()[key]!,
+                              style: const TextStyle(
+                                fontSize: 15,
+                                color: Colors.black,
+                              ),
+                              overflow: TextOverflow.ellipsis, // ← 長い場合は省略
                             ),
-                          ),
-                        );
-                      }).toList(),
-                      onChanged: _isSpinning
-                          ? null
-                          : (newValue) {
-                              if (newValue != null) {
-                                _setGenre(newValue);
-                              }
-                            },
-                      underline: Container(),
-                      icon: const Icon(Icons.arrow_drop_down,
-                          color: Colors.black),
+                          );
+                        }).toList(),
+                        onChanged: _isSpinning
+                            ? null
+                            : (newValue) {
+                                if (newValue != null) {
+                                  _setGenre(newValue);
+                                }
+                              },
+                        underline: Container(),
+                        icon: const Icon(Icons.arrow_drop_down,
+                            color: Colors.black),
+                      ),
                     ),
                   ),
                 ],
               ),
+
               if (_currentGenre == 'custom')
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 12.0),

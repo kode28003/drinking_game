@@ -25,3 +25,4 @@ export '/pages/trump_flip_page/trump_flip_page_widget.dart'
     show TrumpFlipPageWidget;
 export '/pages/five_second_page/five_second_page_widget.dart'
     show FiveSecondPageWidget;
+export '/pages/fruit_page/fruit_page_widget.dart' show FruitPageWidget;

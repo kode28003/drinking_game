@@ -173,6 +173,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: FiveSecondPageWidget.routeName,
           path: FiveSecondPageWidget.routePath,
           builder: (context, params) => FiveSecondPageWidget(),
+        ),
+        FFRoute(
+          name: FruitPageWidget.routeName,
+          path: FruitPageWidget.routePath,
+          builder: (context, params) => FruitPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

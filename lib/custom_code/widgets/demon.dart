@@ -10,6 +10,8 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'dart:math';
+import 'package:drinking_game/custom_code/actions/show_interstitial_ad_custom.dart'
+    as actions;
 
 class Demon extends StatefulWidget {
   const Demon({
@@ -236,7 +238,13 @@ class _DemonState extends State<Demon> with SingleTickerProviderStateMixin {
                         ),
                         const SizedBox(height: 20),
                         ElevatedButton(
-                          onPressed: initializeGame,
+                          // onPressed: initializeGame,
+                          onPressed: () {
+                            // 広告を表示
+                            actions.showInterstitialAdCustom();
+                            // ゲームをリセット
+                            initializeGame();
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF2196f3),
                             padding: const EdgeInsets.symmetric(

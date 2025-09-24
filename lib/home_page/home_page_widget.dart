@@ -163,6 +163,18 @@ class _HomePageWidgetState extends State<HomePageWidget>
           ),
         ],
       ),
+      'stackOnPageLoadAnimation11': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          ShimmerEffect(
+            curve: Curves.easeInOut,
+            delay: 500.0.ms,
+            duration: 1000.0.ms,
+            color: Color(0x80FFFFFF),
+            angle: 0.524,
+          ),
+        ],
+      ),
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
@@ -682,7 +694,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             safeSetState(() {});
 
                             context.pushNamed(
-                              CoinTossPageWidget.routeName,
+                              FruitPageWidget.routeName,
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
@@ -700,7 +712,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 color: Colors.transparent,
                                 elevation: 20.0,
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(4.0),
                                 ),
                                 child: Container(
                                   decoration: BoxDecoration(
@@ -710,16 +722,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         '500x500?videogame#1',
                                       ).image,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(4.0),
                                     shape: BoxShape.rectangle,
                                   ),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 15.0),
                                     child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(16.0),
+                                      borderRadius: BorderRadius.circular(4.0),
                                       child: Image.asset(
-                                        'assets/images/coinFront.png',
+                                        'assets/images/g_(1).png',
                                         fit: BoxFit.cover,
                                       ),
                                     ),
@@ -748,10 +760,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             BorderRadius.circular(12.0),
                                       ),
                                       alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         FFLocalizations.of(context).getText(
-                                          'jws4c1kg' /* コイントス */,
+                                          'yu882gci' /* フルーツと爆弾ゲーム */,
                                         ),
+                                        textAlign: TextAlign.center,
+                                        maxLines: 1,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -1290,10 +1304,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             BorderRadius.circular(12.0),
                                       ),
                                       alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         FFLocalizations.of(context).getText(
                                           'c655xfec' /* 5秒チャレンジゲーム */,
                                         ),
+                                        maxLines: 1,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -1321,6 +1336,114 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           ),
                         ).animateOnPageLoad(
                             animationsMap['stackOnPageLoadAnimation10']!),
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            FFAppState().tryGameTime =
+                                FFAppState().tryGameTime + 2;
+                            safeSetState(() {});
+
+                            context.pushNamed(
+                              CoinTossPageWidget.routeName,
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType: PageTransitionType.scale,
+                                  alignment: Alignment.bottomCenter,
+                                  duration: Duration(milliseconds: 400),
+                                ),
+                              },
+                            );
+                          },
+                          child: Stack(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            children: [
+                              Material(
+                                color: Colors.transparent,
+                                elevation: 20.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: Image.network(
+                                        '500x500?videogame#1',
+                                      ).image,
+                                    ),
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    shape: BoxShape.rectangle,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 15.0),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(16.0),
+                                      child: Image.asset(
+                                        'assets/images/coinFront.png',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(0.0, 1.0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      4.0, 0.0, 4.0, 12.0),
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    elevation: 20.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                    ),
+                                    child: Container(
+                                      constraints: BoxConstraints(
+                                        minHeight: 30.0,
+                                        maxHeight: 35.0,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFFF45454),
+                                        borderRadius:
+                                            BorderRadius.circular(12.0),
+                                      ),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'jws4c1kg' /* コイントス */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              font: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w600,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                              color: Colors.white,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w600,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ).animateOnPageLoad(
+                            animationsMap['stackOnPageLoadAnimation11']!),
                       ],
                     ),
                   ),
