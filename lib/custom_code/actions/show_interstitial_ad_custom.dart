@@ -13,4 +13,21 @@ import 'package:drinking_game/flutter_flow/admob_util.dart' as admob;
 Future showInterstitialAdCustom() async {
   // Add your function code here!
   await admob.showInterstitialAd();
+  // await admob.loadInterstitialAd(
+  //   'ca-app-pub-6843318091304139~3018067073', // ← テストID（Android用）
+  //   () {
+  //     // 成功時
+  //     print("Interstitial ad loaded");
+  //     //admob.showInterstitialAd();
+  //   },
+  //   () {
+  //     // 失敗時
+  //     print("Failed to load interstitial ad");
+  //   },
+  // );
+  admob.loadInterstitialAd(
+    "",
+    "ca-app-pub-6843318091304139/3140365667",
+    false,
+  );
 }

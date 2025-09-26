@@ -217,7 +217,7 @@ class _IpponResultWidgetState extends State<IpponResultWidget>
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Text(
+                                                AutoSizeText(
                                                   FFLocalizations.of(context)
                                                       .getText(
                                                     '1pg2jyr8' /* 優勝は */,

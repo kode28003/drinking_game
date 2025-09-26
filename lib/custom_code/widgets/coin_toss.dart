@@ -30,6 +30,18 @@ class CoinToss extends StatefulWidget {
 class _CoinTossState extends State<CoinToss>
     with SingleTickerProviderStateMixin {
   // 多言語テキストを管理するマップ
+  // final Map<String, Map<String, String>> localizedStrings = {
+  //   'ja': {
+  //     'toss_coin_button': 'コイントス',
+  //     'heads': '表',
+  //     'tails': '裏',
+  //   },
+  //   'en': {
+  //     'toss_coin_button': 'Toss Coin',
+  //     'heads': 'Heads',
+  //     'tails': 'Tails',
+  //   },
+  // };
   final Map<String, Map<String, String>> localizedStrings = {
     'ja': {
       'toss_coin_button': 'コイントス',
@@ -40,6 +52,21 @@ class _CoinTossState extends State<CoinToss>
       'toss_coin_button': 'Toss Coin',
       'heads': 'Heads',
       'tails': 'Tails',
+    },
+    'ru': {
+      'toss_coin_button': 'Подбросить монету',
+      'heads': 'Орел',
+      'tails': 'Решка',
+    },
+    'vi': {
+      'toss_coin_button': 'Tung đồng xu',
+      'heads': 'Mặt ngửa',
+      'tails': 'Mặt sấp',
+    },
+    'ms': {
+      'toss_coin_button': 'Lempar Syiling',
+      'heads': 'Muka',
+      'tails': 'Ekor',
     },
   };
 

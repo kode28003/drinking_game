@@ -30,31 +30,6 @@ class FruitBombGame extends StatefulWidget {
 
 class _FruitBombGameState extends State<FruitBombGame>
     with TickerProviderStateMixin {
-  // final Map<String, Map<String, String>> _localizedStrings = {
-  //   'ja': {
-  //     'game_title': 'フルーツと爆弾ゲーム',
-  //     'game_subtitle': '順番にサイコロを振ろう！',
-  //     'game_message_start': 'サイコロを振ってください',
-  //     'game_message_rolling': '振っています...',
-  //     'game_message_safe': '結果: 爆弾はなし！セーフ！',
-  //     'game_message_over': 'ゲームオーバー！爆弾に当たってしまった！',
-  //     'game_message_clear': 'すべてのアイテムを消費しました！もう一度遊ぶにはボタンを押してください。',
-  //     'button_roll': '振る！',
-  //     'button_restart': 'リセットして遊ぶ',
-  //   },
-  //   'en': {
-  //     'game_title': 'Fruit & Bomb Game',
-  //     'game_subtitle': "Let's take turns rolling the dice!",
-  //     'game_message_start': 'Roll the dice!',
-  //     'game_message_rolling': 'Rolling...',
-  //     'game_message_safe': 'Result: No bomb! Safe!',
-  //     'game_message_over': 'Game Over! You hit the bomb!',
-  //     'game_message_clear': 'All items used! Press the button to play again.',
-  //     'button_roll': 'Roll!',
-  //     'button_restart': 'Play Again',
-  //   },
-  // };
-
   final Map<String, Map<String, String>> _localizedStrings = {
     'ja': {
       'game_title': 'フルーツと爆弾ゲーム',
@@ -78,6 +53,18 @@ class _FruitBombGameState extends State<FruitBombGame>
       'button_roll': 'Roll!',
       'button_restart': 'Play Again',
     },
+    'ms': {
+      'game_title': 'Permainan Buah dan Bom',
+      'game_subtitle': 'Giliran bergolek dadu!',
+      'game_message_start': 'Sila gulingkan dadu',
+      'game_message_rolling': 'Sedang bergolek...',
+      'game_message_safe': 'Keputusan: Tiada bom! Selamat!',
+      'game_message_over': 'Permainan tamat! Tertangkap bom!',
+      'game_message_clear':
+          'Semua item telah digunakan! Tekan butang untuk bermain semula.',
+      'button_roll': 'Golek!',
+      'button_restart': 'Reset dan main semula',
+    },
     'ru': {
       'game_title': 'Игра Фрукты и Бомбы',
       'game_subtitle': 'Бросайте кости по очереди!',
@@ -86,7 +73,7 @@ class _FruitBombGameState extends State<FruitBombGame>
       'game_message_safe': 'Результат: Бомбы нет! Вы в безопасности!',
       'game_message_over': 'Игра окончена! Вы попали на бомбу!',
       'game_message_clear':
-          'Все предметы использованы! Нажмите кнопку, чтобы сыграть снова.',
+          'предметы использованы! Нажмите кнопку, чтобы сыграть снова.',
       'button_roll': 'Бросить!',
       'button_restart': 'Играть снова',
     },

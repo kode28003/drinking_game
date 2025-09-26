@@ -53,6 +53,16 @@ class _FiveSecondState extends State<FiveSecond>
       'btn_start': 'スタート',
       'btn_stop': 'ストップ',
     },
+    'ms': {
+      'title': 'Permainan Tepat 5 Saat',
+      'start_hint': 'Tekan "Mula".',
+      'start': 'Mula!',
+      'hidden': 'Bersembunyi! Hentikan pada 5 saat!',
+      'success': 'Berjaya! Ralat {diff} saat!',
+      'fail': 'Malangnya... Ralat {diff} saat.',
+      'btn_start': 'Mula',
+      'btn_stop': 'Berhenti',
+    },
     'ru': {
       'title': 'Игра «Ровно 5 секунд»',
       'start_hint': 'Нажми «Старт».',
@@ -132,11 +142,16 @@ class _FiveSecondState extends State<FiveSecond>
     super.dispose();
   }
 
+  Future<void> showInterstitialAdCustoms() async {
+    await actions.showInterstitialAdCustom();
+  }
+
   void _startTimer() {
     setState(() {
       _tryNumber++;
       if (_tryNumber % 4 == 0) {
-        actions.showInterstitialAdCustom(); // ← 広告呼び出し
+        //  actions.showInterstitialAdCustom(); // ← 広告呼び出し
+        showInterstitialAdCustoms();
       }
       _stopwatch.reset();
       _stopwatch.start();

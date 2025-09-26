@@ -86,6 +86,22 @@ class _TrumpFlipGameState extends State<TrumpFlipGame> {
       'result_message': '結果: ',
       'ok_button': 'OK',
     },
+    'ms': {
+      'game_title': 'Permainan Kad Terbalik',
+      'game_rule':
+          'Minum 1 gelas jika keluar J, Q, K; minum 2 gelas jika keluar joker.',
+      'initial_message': 'Sila ketik kad',
+      'tap_again_message': 'Sila ketik kad sekali lagi',
+      'deck_empty_title': 'Dek sudah habis!',
+      'deck_empty_content': 'Permainan baru akan bermula.',
+      'new_game_message': 'Permainan baru telah bermula!',
+      'take_one_drink': 'Minum 1 gelas!',
+      'take_two_drinks': 'Minum 2 gelas!',
+      'safe': 'Selamat!',
+      'no_drinks': 'Tidak perlu minum.',
+      'result_message': 'Keputusan: ',
+      'ok_button': 'OK',
+    },
     'en': {
       'game_title': 'Draw & Drink! Card Game',
       'game_rule':

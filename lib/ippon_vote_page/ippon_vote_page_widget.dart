@@ -180,11 +180,18 @@ class _IpponVotePageWidgetState extends State<IpponVotePageWidget>
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                content: Text(
-                                    FFLocalizations.of(context).getVariableText(
-                                  jaText: '最低1つは投票してください',
-                                  enText:
-                                      'Please vote for at least one option.',
+                                content: Text(valueOrDefault<String>(
+                                  FFLocalizations.of(context).getVariableText(
+                                    jaText: '最低1つは投票してください',
+                                    enText:
+                                        'Please vote for at least one option.',
+                                    ruText:
+                                        'Пожалуйста, отдайте хотя бы один голос.',
+                                    viText: 'Hãy bỏ ít nhất một phiếu bầu.',
+                                    msText:
+                                        'Sila undi untuk sekurang-kurangnya satu',
+                                  ),
+                                  'Please vote for at least one option.',
                                 )),
                                 actions: [
                                   TextButton(

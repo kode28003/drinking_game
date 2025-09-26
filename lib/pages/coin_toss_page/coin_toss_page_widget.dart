@@ -189,7 +189,7 @@ class _CoinTossPageWidgetState extends State<CoinTossPageWidget>
                                           ),
                                           color: FlutterFlowTheme.of(context)
                                               .primaryBackground,
-                                          fontSize: 24.0,
+                                          fontSize: 22.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
@@ -263,7 +263,7 @@ class _CoinTossPageWidgetState extends State<CoinTossPageWidget>
                                           ),
                                           color: FlutterFlowTheme.of(context)
                                               .primaryBackground,
-                                          fontSize: 24.0,
+                                          fontSize: 22.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:

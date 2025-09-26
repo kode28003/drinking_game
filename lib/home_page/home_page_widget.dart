@@ -332,6 +332,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         FFLocalizations.of(context).getText(
                                           '0cgbm1hq' /* ルーレット */,
                                         ),
+                                        textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -440,6 +441,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         FFLocalizations.of(context).getText(
                                           '9sgj9lg4' /* ポーカー */,
                                         ),
+                                        textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -548,6 +550,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         FFLocalizations.of(context).getText(
                                           '9a5l7kpw' /* 顔ゲーム */,
                                         ),
+                                        textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -652,10 +655,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             BorderRadius.circular(12.0),
                                       ),
                                       alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         FFLocalizations.of(context).getText(
                                           'zisw65uo' /* 山手線ゲーム */,
                                         ),
+                                        textAlign: TextAlign.center,
+                                        maxLines: 1,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -875,6 +880,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         FFLocalizations.of(context).getText(
                                           'by6g8m2r' /* 大喜利 */,
                                         ),
+                                        textAlign: TextAlign.center,
                                         maxLines: 1,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -984,6 +990,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         FFLocalizations.of(context).getText(
                                           '78pxr4f1' /* 早口言葉 */,
                                         ),
+                                        textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -1088,10 +1095,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             BorderRadius.circular(12.0),
                                       ),
                                       alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         FFLocalizations.of(context).getText(
                                           '1c45nahm' /* 多数決ゲーム */,
                                         ),
+                                        textAlign: TextAlign.center,
+                                        maxLines: 1,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -1200,6 +1209,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         FFLocalizations.of(context).getText(
                                           '3hj0do20' /* フリップゲーム */,
                                         ),
+                                        textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -1308,6 +1318,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         FFLocalizations.of(context).getText(
                                           'c655xfec' /* 5秒チャレンジゲーム */,
                                         ),
+                                        textAlign: TextAlign.center,
                                         maxLines: 1,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -1413,10 +1424,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             BorderRadius.circular(12.0),
                                       ),
                                       alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         FFLocalizations.of(context).getText(
                                           'jws4c1kg' /* コイントス */,
                                         ),
+                                        textAlign: TextAlign.center,
+                                        maxLines: 1,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(

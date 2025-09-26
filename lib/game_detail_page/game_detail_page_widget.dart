@@ -176,12 +176,27 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             8.0, 4.0, 0.0, 0.0),
                                         child: AutoSizeText(
-                                          '${FFLocalizations.of(context).getVariableText(
-                                            jaText: '参加人数 :',
-                                            enText: 'participants：',
-                                          )}${widget.thisGame?.minPlayers.toString()}${FFLocalizations.of(context).getVariableText(
-                                            jaText: '人～',
-                                            enText: '～',
+                                          '${valueOrDefault<String>(
+                                            FFLocalizations.of(context)
+                                                .getVariableText(
+                                              jaText: '参加人数 :',
+                                              enText: 'participants：',
+                                              ruText: 'Количество участников:',
+                                              viText:
+                                                  'Số lượng người tham gia:',
+                                              msText: 'Bilangan peserta:',
+                                            ),
+                                            'Количество участников:',
+                                          )}${widget.thisGame?.minPlayers.toString()}${valueOrDefault<String>(
+                                            FFLocalizations.of(context)
+                                                .getVariableText(
+                                              jaText: '人～',
+                                              enText: '～',
+                                              ruText: '～',
+                                              viText: '～',
+                                              msText: '～',
+                                            ),
+                                            '～',
                                           )}',
                                           maxLines: 2,
                                           style: FlutterFlowTheme.of(context)
@@ -228,6 +243,18 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                         widget.thisGame?.titleEn,
                                         'title',
                                       ),
+                                      ruText: valueOrDefault<String>(
+                                        widget.thisGame?.titleEn,
+                                        'title',
+                                      ),
+                                      viText: valueOrDefault<String>(
+                                        widget.thisGame?.titleEn,
+                                        'title',
+                                      ),
+                                      msText: valueOrDefault<String>(
+                                        widget.thisGame?.titleEn,
+                                        'title',
+                                      ),
                                     ),
                                     maxLines: 1,
                                     style: FlutterFlowTheme.of(context)
@@ -261,6 +288,18 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                           'subtitle',
                                         ),
                                         enText: valueOrDefault<String>(
+                                          widget.thisGame?.subTitleEn,
+                                          'subtitle',
+                                        ),
+                                        ruText: valueOrDefault<String>(
+                                          widget.thisGame?.subTitleEn,
+                                          'subtitle',
+                                        ),
+                                        viText: valueOrDefault<String>(
+                                          widget.thisGame?.subTitleEn,
+                                          'subtitle',
+                                        ),
+                                        msText: valueOrDefault<String>(
                                           widget.thisGame?.subTitleEn,
                                           'subtitle',
                                         ),
@@ -305,6 +344,18 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                           'description',
                                         ),
                                         enText: valueOrDefault<String>(
+                                          widget.thisGame?.descriptionEn,
+                                          'description',
+                                        ),
+                                        ruText: valueOrDefault<String>(
+                                          widget.thisGame?.descriptionEn,
+                                          'description',
+                                        ),
+                                        viText: valueOrDefault<String>(
+                                          widget.thisGame?.descriptionEn,
+                                          'description',
+                                        ),
+                                        msText: valueOrDefault<String>(
                                           widget.thisGame?.descriptionEn,
                                           'description',
                                         ),
@@ -372,10 +423,20 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                                 ),
                                           ),
                                           Text(
-                                            FFLocalizations.of(context)
-                                                .getVariableText(
-                                              jaText: 'パーティーゲーム',
-                                              enText: 'party game',
+                                            valueOrDefault<String>(
+                                              FFLocalizations.of(context)
+                                                  .getVariableText(
+                                                jaText: 'パーティーゲーム',
+                                                enText: 'party game',
+                                                ruText: 'игровая вечеринка',
+                                                viText: 'trò chơi tiệc tùng',
+                                                msText: valueOrDefault<String>(
+                                                  widget
+                                                      .thisGame?.descriptionEn,
+                                                  'description',
+                                                ),
+                                              ),
+                                              'party game',
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
@@ -467,7 +528,7 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Text(
+                                        AutoSizeText(
                                           FFLocalizations.of(context).getText(
                                             'shiftuzl' /* このアプリで遊ぶ: */,
                                           ),

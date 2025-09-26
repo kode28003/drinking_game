@@ -28,12 +28,29 @@ class Demon extends StatefulWidget {
 }
 
 class _DemonState extends State<Demon> with SingleTickerProviderStateMixin {
+  // final Map<String, Map<String, String>> _localizedStrings = {
+  //   'ja': {
+  //     'game_title_safe': 'セーフ！',
+  //     'game_title_fail': '残念！ハズレ！',
+  //     'game_title_start': '顔をタップしてね',
+  //     'game_over_message': '残念！おじさんが怒った！',
+  //     'play_again_button': 'もう一度',
+  //   },
+  //   'en': {
+  //     'game_title_safe': 'Safe!',
+  //     'game_title_fail': 'Too bad! It\'s a miss!',
+  //     'game_title_start': 'Tap a face!',
+  //     'game_over_message': 'Too bad! The old man got angry!',
+  //     'play_again_button': 'Play Again',
+  //   },
+  // };
+
   final Map<String, Map<String, String>> _localizedStrings = {
     'ja': {
       'game_title_safe': 'セーフ！',
       'game_title_fail': '残念！ハズレ！',
       'game_title_start': '顔をタップしてね',
-      'game_over_message': '残念！おじさんが怒った！',
+      'game_over_message': '残念！鬼が怒った！',
       'play_again_button': 'もう一度',
     },
     'en': {
@@ -42,6 +59,90 @@ class _DemonState extends State<Demon> with SingleTickerProviderStateMixin {
       'game_title_start': 'Tap a face!',
       'game_over_message': 'Too bad! The old man got angry!',
       'play_again_button': 'Play Again',
+    },
+    'zh': {
+      'game_title_safe': '安全！',
+      'game_title_fail': '太遗憾了！没中！',
+      'game_title_start': '点击一个脸！',
+      'game_over_message': '太遗憾了！大叔生气了！',
+      'play_again_button': '再玩一次',
+    },
+    'fr': {
+      'game_title_safe': 'Sûr !',
+      'game_title_fail': 'Dommage ! Raté !',
+      'game_title_start': 'Tapez un visage !',
+      'game_over_message': 'Dommage ! Le monsieur est en colère !',
+      'play_again_button': 'Rejouer',
+    },
+    'es': {
+      'game_title_safe': '¡Seguro!',
+      'game_title_fail': '¡Qué lástima! ¡Fallaste!',
+      'game_title_start': '¡Toca una cara!',
+      'game_over_message': '¡Qué lástima! ¡El señor se enojó!',
+      'play_again_button': 'Jugar de nuevo',
+    },
+    'de': {
+      'game_title_safe': 'Sicher!',
+      'game_title_fail': 'Schade! Verfehlt!',
+      'game_title_start': 'Tippe ein Gesicht!',
+      'game_over_message': 'Schade! Der Mann wurde wütend!',
+      'play_again_button': 'Nochmal spielen',
+    },
+    'ko': {
+      'game_title_safe': '세이프!',
+      'game_title_fail': '아쉽다! 꽝!',
+      'game_title_start': '얼굴을 탭하세요!',
+      'game_over_message': '아쉽다! 아저씨가 화났어!',
+      'play_again_button': '다시 하기',
+    },
+    'ru': {
+      'game_title_safe': 'Безопасно!',
+      'game_title_fail': 'Жаль! Промах!',
+      'game_title_start': 'Нажми на лицо!',
+      'game_over_message': 'Жаль! Дядя рассердился!',
+      'play_again_button': 'Играть снова',
+    },
+    'vi': {
+      'game_title_safe': 'An toàn!',
+      'game_title_fail': 'Thật tiếc! Trượt rồi!',
+      'game_title_start': 'Chạm vào một khuôn mặt!',
+      'game_over_message': 'Thật tiếc! Chú đã tức giận!',
+      'play_again_button': 'Chơi lại',
+    },
+    'it': {
+      'game_title_safe': 'Sicuro!',
+      'game_title_fail': 'Peccato! Mancato!',
+      'game_title_start': 'Tocca un volto!',
+      'game_over_message': 'Peccato! L\'uomo si è arrabbiato!',
+      'play_again_button': 'Gioca di nuovo',
+    },
+    'pt': {
+      'game_title_safe': 'Seguro!',
+      'game_title_fail': 'Que pena! Errou!',
+      'game_title_start': 'Toque em um rosto!',
+      'game_over_message': 'Que pena! O homem ficou bravo!',
+      'play_again_button': 'Jogar novamente',
+    },
+    'ar': {
+      'game_title_safe': 'آمن!',
+      'game_title_fail': 'يا للأسف! أخطأت!',
+      'game_title_start': 'اضغط على وجه!',
+      'game_over_message': 'يا للأسف! الرجل غضب!',
+      'play_again_button': 'العب مرة أخرى',
+    },
+    'hi': {
+      'game_title_safe': 'सुरक्षित!',
+      'game_title_fail': 'अफसोस! चूक गए!',
+      'game_title_start': 'एक चेहरा टैप करें!',
+      'game_over_message': 'अफसोस! अंकल नाराज़ हो गए!',
+      'play_again_button': 'फिर से खेलें',
+    },
+    'ms': {
+      'game_title_safe': 'Selamat!',
+      'game_title_fail': 'Sayang sekali! Terlepas!',
+      'game_title_start': 'Ketik muka!',
+      'game_over_message': 'Sayang sekali! Pakcik marah!',
+      'play_again_button': 'Main lagi',
     },
   };
 
