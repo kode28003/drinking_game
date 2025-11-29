@@ -116,7 +116,7 @@ class _CoinTossState extends State<CoinToss>
 
   void _tossCoin() {
     _tryNumber++; // ★ 回数カウント
-    if (_tryNumber % 2 == 0) {
+    if (_tryNumber % 3 == 0) {
       actions.showInterstitialAdCustom(); // ★ 2回に1回広告を表示
     }
     _controller.reset();
