@@ -49,65 +49,6 @@ class PokerTest extends StatefulWidget {
 }
 
 class _PokerTestState extends State<PokerTest> {
-  // 多言語テキストを管理するマップ
-  // final Map<String, Map<String, dynamic>> localizedStrings = {
-  //   'ja': {
-  //     'game_start_message': '参加人数を選び、ゲームを開始しよう！',
-  //     'dealing_cards': 'カードを配っています...',
-  //     'cards_dealt': '全員のカードがめくられました。',
-  //     'flop': 'フロップ！3枚のカードがめくられます。',
-  //     'turn': 'ターン！4枚目のカードがめくられます。',
-  //     'river': 'リバー！最後のカードがめくられます。',
-  //     'is_loser': 'が敗者です！',
-  //     'no_loser': '誰も負けではありません！',
-  //     'player_count_label': 'プレイヤー数',
-  //     'player': 'プレイヤー ',
-  //     'win_probability': '勝率',
-  //     'loser': '敗者',
-  //     'in_progress': '進行中...',
-  //     'start_game': 'ゲームを開始',
-  //     'play_again': 'もう一度ゲーム',
-  //     'hand_ranks': {
-  //       1: 'ハイカード',
-  //       2: 'ワンペア',
-  //       3: 'ツーペア',
-  //       4: 'スリーカード',
-  //       5: 'ストレート',
-  //       6: 'フラッシュ',
-  //       7: 'フルハウス',
-  //       8: 'フォーカード',
-  //       9: 'ストレートフラッシュ',
-  //     }
-  //   },
-  //   'en': {
-  //     'game_start_message': 'Choose the number of players and start the game!',
-  //     'dealing_cards': 'Dealing cards...',
-  //     'cards_dealt': 'All cards have been revealed.',
-  //     'flop': 'Flop! 3 community cards will be revealed.',
-  //     'turn': 'Turn! The 4th card will be revealed.',
-  //     'river': 'River! The last card will be revealed.',
-  //     'is_loser': ' is the loser!',
-  //     'no_loser': 'No one is a loser!',
-  //     'player_count_label': 'Number of Players',
-  //     'player': 'Player ',
-  //     'win_probability': 'Win Probability',
-  //     'loser': 'Loser',
-  //     'in_progress': 'In Progress...',
-  //     'start_game': 'Start Game',
-  //     'play_again': 'Play Again',
-  //     'hand_ranks': {
-  //       1: 'High Card',
-  //       2: 'One Pair',
-  //       3: 'Two Pair',
-  //       4: 'Three of a Kind',
-  //       5: 'Straight',
-  //       6: 'Flush',
-  //       7: 'Full House',
-  //       8: 'Four of a Kind',
-  //       9: 'Straight Flush',
-  //     }
-  //   },
-  // };
   final Map<String, Map<String, dynamic>> localizedStrings = {
     'ja': {
       'game_start_message': '参加人数を選び、ゲームを開始しよう！',

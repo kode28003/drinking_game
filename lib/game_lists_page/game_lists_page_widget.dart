@@ -1,6 +1,7 @@
 import '/backend/schema/structs/index.dart';
 import '/components/drinking_app_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
@@ -115,28 +116,23 @@ class _GameListsPageWidgetState extends State<GameListsPageWidget>
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Icon(
-                              Icons.smartphone,
-                              color: FlutterFlowTheme.of(context).primary,
-                              size: 24.0,
-                            ),
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                '3hhadh8t' /* : このアプリで遊べる */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FlutterFlowLanguageSelector(
+                          width: 180.0,
+                          height: 36.0,
+                          backgroundColor:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          borderColor: Colors.transparent,
+                          dropdownIconColor:
+                              FlutterFlowTheme.of(context).secondaryText,
+                          borderRadius: 6.0,
+                          textStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.inter(
                                       fontWeight: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -145,9 +141,6 @@ class _GameListsPageWidgetState extends State<GameListsPageWidget>
                                           .bodyMedium
                                           .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
-                                    fontSize: 13.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -156,11 +149,58 @@ class _GameListsPageWidgetState extends State<GameListsPageWidget>
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                            ),
-                          ],
+                          hideFlags: true,
+                          flagSize: 18.0,
+                          flagTextGap: 6.0,
+                          currentLanguage:
+                              FFLocalizations.of(context).languageCode,
+                          languages: FFLocalizations.languages(),
+                          onChanged: (lang) => setAppLanguage(context, lang),
                         ),
-                      ),
-                    ].divide(SizedBox(width: 8.0)),
+                        Container(
+                          decoration: BoxDecoration(),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Icon(
+                                Icons.smartphone,
+                                color: FlutterFlowTheme.of(context).primary,
+                                size: 24.0,
+                              ),
+                              Text(
+                                FFLocalizations.of(context).getText(
+                                  '3hhadh8t' /* : このアプリで遊べる */,
+                                ),
+                                maxLines: 1,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      fontSize: 13.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                    ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ].divide(SizedBox(width: 30.0)),
+                    ),
                   ),
                 ),
                 Stack(
