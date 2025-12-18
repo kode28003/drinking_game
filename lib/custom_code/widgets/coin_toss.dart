@@ -68,6 +68,11 @@ class _CoinTossState extends State<CoinToss>
       'heads': 'Muka',
       'tails': 'Ekor',
     },
+    'ko': {
+      'toss_coin_button': '동전 던지기',
+      'heads': '앞면',
+      'tails': '뒷면',
+    },
   };
 
   String resultText = '';

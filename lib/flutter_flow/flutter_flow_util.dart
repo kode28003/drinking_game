@@ -40,6 +40,7 @@ void _setTimeagoLocales() {
   timeago.setLocaleMessages('vi_short', timeago.ViShortMessages());
   timeago.setLocaleMessages('ms', timeago.MsMyMessages());
   timeago.setLocaleMessages('ms_short', timeago.MsMyShortMessages());
+  timeago.setLocaleMessages('ko', timeago.KoMessages());
 }
 
 String dateTimeFormat(String format, DateTime? dateTime, {String? locale}) {

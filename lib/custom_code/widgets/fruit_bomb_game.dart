@@ -88,6 +88,17 @@ class _FruitBombGameState extends State<FruitBombGame>
       'button_roll': 'Tung!',
       'button_restart': 'Chơi lại',
     },
+    'ko': {
+      'game_title': '과일 & 폭탄 게임',
+      'game_subtitle': '차례대로 주사위를 굴리세요!',
+      'game_message_start': '주사위를 굴리세요!',
+      'game_message_rolling': '굴리는 중...',
+      'game_message_safe': '결과: 폭탄 없음! 안전!',
+      'game_message_over': '게임 종료! 폭탄에 당했어요!',
+      'game_message_clear': '모든 아이템을 사용했습니다! 버튼을 눌러 다시 시작하세요.',
+      'button_roll': '굴리기!',
+      'button_restart': '다시 시작',
+    },
   };
   final List<String> fruits = ['🍎', '🍓', '🍌', '🍇', '🍉', '🥝', '🍑', '🍊'];
   final String bomb = '💣';

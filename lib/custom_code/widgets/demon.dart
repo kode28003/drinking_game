@@ -149,7 +149,8 @@ class _DemonState extends State<Demon> with SingleTickerProviderStateMixin {
   int? losingOjisanIndex;
   bool isGameOver = false;
   final int totalOjisans = 20;
-  final List<String> ojisanFaces = ['👴', '👨', '🧓', '😀'];
+  // final List<String> ojisanFaces = ['👴', '👨', '🧓', '😀'];
+  final List<String> ojisanFaces = ['💣', '💣', '💣', '💣'];
   final List<String> fixedFaces = [];
   final List<bool> selectedOjisans = List.generate(20, (index) => false);
 

@@ -548,7 +548,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '9a5l7kpw' /* 顔ゲーム */,
+                                          '9a5l7kpw' /* 鬼ゲーム */,
                                         ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)

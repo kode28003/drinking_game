@@ -150,6 +150,21 @@ class _TrumpFlipGameState extends State<TrumpFlipGame> {
       'result_message': 'Kết quả: ',
       'ok_button': 'OK',
     },
+    'ko': {
+      'game_title': '카드 뽑기 & 벌칙 술!',
+      'game_rule': '카드를 한 장 뽑습니다. J, Q, K가 나오면 한 잔! 조커가 나오면 두 잔!',
+      'initial_message': '카드를 뽑으려면 터치하세요',
+      'tap_again_message': '다시 터치해서 다음 카드를 뽑으세요',
+      'deck_empty_title': '카드가 다 떨어졌어요!',
+      'deck_empty_content': '새 게임을 시작하세요.',
+      'new_game_message': '새 게임이 시작되었습니다!',
+      'take_one_drink': '한 잔 마셔요!',
+      'take_two_drinks': '두 잔 마셔요!',
+      'safe': '세이프!',
+      'no_drinks': '마실 필요 없어요.',
+      'result_message': '결과: ',
+      'ok_button': '확인',
+    },
   };
 
   final List<String> suits = ['♥', '♦', '♣', '♠'];

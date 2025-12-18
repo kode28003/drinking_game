@@ -185,6 +185,7 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                               viText:
                                                   'Số lượng người tham gia:',
                                               msText: 'Bilangan peserta:',
+                                              koText: '참가 인원:',
                                             ),
                                             'Количество участников:',
                                           )}${widget.thisGame?.minPlayers.toString()}${valueOrDefault<String>(
@@ -195,6 +196,7 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                               ruText: '～',
                                               viText: '～',
                                               msText: '～',
+                                              koText: '～',
                                             ),
                                             '～',
                                           )}',
@@ -255,6 +257,10 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                         widget.thisGame?.titleEn,
                                         'title',
                                       ),
+                                      koText: valueOrDefault<String>(
+                                        widget.thisGame?.titleEn,
+                                        'title',
+                                      ),
                                     ),
                                     maxLines: 1,
                                     style: FlutterFlowTheme.of(context)
@@ -300,6 +306,10 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                           'subtitle',
                                         ),
                                         msText: valueOrDefault<String>(
+                                          widget.thisGame?.subTitleEn,
+                                          'subtitle',
+                                        ),
+                                        koText: valueOrDefault<String>(
                                           widget.thisGame?.subTitleEn,
                                           'subtitle',
                                         ),
@@ -356,6 +366,10 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                           'description',
                                         ),
                                         msText: valueOrDefault<String>(
+                                          widget.thisGame?.descriptionEn,
+                                          'description',
+                                        ),
+                                        koText: valueOrDefault<String>(
                                           widget.thisGame?.descriptionEn,
                                           'description',
                                         ),
@@ -435,6 +449,7 @@ class _GameDetailPageWidgetState extends State<GameDetailPageWidget> {
                                                       .thisGame?.descriptionEn,
                                                   'description',
                                                 ),
+                                                koText: '파티 게임',
                                               ),
                                               'party game',
                                             ),

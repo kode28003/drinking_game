@@ -190,6 +190,7 @@ class _IpponVotePageWidgetState extends State<IpponVotePageWidget>
                                     viText: 'Hãy bỏ ít nhất một phiếu bầu.',
                                     msText:
                                         'Sila undi untuk sekurang-kurangnya satu',
+                                    koText: '최소 한 가지 옵션에 투표해 주십시오.',
                                   ),
                                   'Please vote for at least one option.',
                                 )),

@@ -93,6 +93,16 @@ class _FiveSecondState extends State<FiveSecond>
       'btn_start': 'Start',
       'btn_stop': 'Stop',
     },
+    'ko': {
+      'title': '5초 챌린지',
+      'start_hint': '"시작"을 누르세요.',
+      'start': '시작!',
+      'hidden': '숨김! 5초에 멈추세요!',
+      'success': '대단해요! {diff}초 차이!',
+      'fail': '아쉽네요… {diff}초 차이였어요.',
+      'btn_start': '시작',
+      'btn_stop': '정지',
+    },
   };
 
   /// 🌍 言語取得
