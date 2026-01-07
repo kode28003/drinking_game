@@ -37,39 +37,6 @@ class TrumpFlipGame extends StatefulWidget {
 }
 
 class _TrumpFlipGameState extends State<TrumpFlipGame> {
-  // final Map<String, Map<String, String>> _localizedStrings = {
-  //   'ja': {
-  //     'game_title': 'フリップカードゲーム',
-  //     'game_rule': 'J, Q, Kが出たら1杯、jokerが出たら2杯飲んでください。',
-  //     'initial_message': 'カードをタップしてください',
-  //     'tap_again_message': 'もう一度カードをタップしてください',
-  //     'deck_empty_title': 'デッキが空になりました！',
-  //     'deck_empty_content': '新しいゲームを始めます。',
-  //     'new_game_message': '新しいゲームが始まりました！',
-  //     'take_one_drink': '1杯飲んでください！',
-  //     'take_two_drinks': '2杯飲んでください！',
-  //     'safe': 'セーフ！',
-  //     'no_drinks': '飲まなくても大丈夫です。',
-  //     'result_message': '結果: ',
-  //     'ok_button': 'OK',
-  //   },
-  //   'en': {
-  //     'game_title': 'Draw & Drink! Card Game',
-  //     'game_rule':
-  //         'Draw a card. If J, Q, or K appear, take 1 drink. If a joker appears, take 2 drinks.',
-  //     'initial_message': 'Draw a card',
-  //     'tap_again_message': 'Tap again to draw the next card',
-  //     'deck_empty_title': 'Deck is empty!',
-  //     'deck_empty_content': 'Starting a new game.',
-  //     'new_game_message': 'A new game has started!',
-  //     'take_one_drink': 'Take one drink!',
-  //     'take_two_drinks': 'Take two drinks!',
-  //     'safe': 'Safe!',
-  //     'no_drinks': 'No drinks needed.',
-  //     'result_message': 'Result: ',
-  //     'ok_button': 'OK',
-  //   },
-  // };
   final Map<String, Map<String, String>> _localizedStrings = {
     'ja': {
       'game_title': 'フリップカードゲーム',

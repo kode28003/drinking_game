@@ -850,7 +850,7 @@ class _MinorityState extends State<Minority> {
     _tryNumber++; // ★ 新しい問題ごとにカウントアップ
 
     // 2回ごとに広告を出す
-    if (_tryNumber % 3 == 0) {
+    if (_tryNumber % 4 == 0) {
       actions.showInterstitialAdCustom(); // ← ここをあなたの広告表示処理に変更
     }
     List<dynamic> questions = [];

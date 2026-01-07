@@ -160,7 +160,6 @@ class _FiveSecondState extends State<FiveSecond>
     setState(() {
       _tryNumber++;
       if (_tryNumber % 4 == 0) {
-        //  actions.showInterstitialAdCustom(); // ← 広告呼び出し
         showInterstitialAdCustoms();
       }
       _stopwatch.reset();

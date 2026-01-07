@@ -175,6 +175,18 @@ class _HomePageWidgetState extends State<HomePageWidget>
           ),
         ],
       ),
+      'stackOnPageLoadAnimation12': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          ShimmerEffect(
+            curve: Curves.easeInOut,
+            delay: 500.0.ms,
+            duration: 1000.0.ms,
+            color: Color(0x80FFFFFF),
+            angle: 0.524,
+          ),
+        ],
+      ),
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
@@ -589,6 +601,116 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             safeSetState(() {});
 
                             context.pushNamed(
+                              DrinkingGameMakerPageWidget.routeName,
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType: PageTransitionType.scale,
+                                  alignment: Alignment.bottomCenter,
+                                  duration: Duration(milliseconds: 400),
+                                ),
+                              },
+                            );
+                          },
+                          child: Stack(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            children: [
+                              Material(
+                                color: Colors.transparent,
+                                elevation: 20.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: Image.network(
+                                        '500x500?videogame#1',
+                                      ).image,
+                                    ),
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    shape: BoxShape.rectangle,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 15.0),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(16.0),
+                                      child: Image.asset(
+                                        'assets/images/Gemini_Generated_Image_fm4d9jfm4d9jfm4d__1_-removebg-preview.png',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(0.0, 1.0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      4.0, 0.0, 4.0, 12.0),
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    elevation: 20.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                    ),
+                                    child: Container(
+                                      constraints: BoxConstraints(
+                                        minHeight: 30.0,
+                                        maxHeight: 35.0,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFFF45454),
+                                        borderRadius:
+                                            BorderRadius.circular(12.0),
+                                      ),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      child: AutoSizeText(
+                                        FFLocalizations.of(context).getText(
+                                          '8tp7x3kd' /* 飲みゲーメイカー */,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                        maxLines: 1,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              font: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w600,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                              color: Colors.white,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w600,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ).animateOnPageLoad(
+                            animationsMap['stackOnPageLoadAnimation4']!),
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            FFAppState().tryGameTime =
+                                FFAppState().tryGameTime + 2;
+                            safeSetState(() {});
+
+                            context.pushNamed(
                               YamanotePageWidget.routeName,
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: TransitionInfo(
@@ -687,7 +809,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             ],
                           ),
                         ).animateOnPageLoad(
-                            animationsMap['stackOnPageLoadAnimation4']!),
+                            animationsMap['stackOnPageLoadAnimation5']!),
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -797,7 +919,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             ],
                           ),
                         ).animateOnPageLoad(
-                            animationsMap['stackOnPageLoadAnimation5']!),
+                            animationsMap['stackOnPageLoadAnimation6']!),
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -908,7 +1030,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             ],
                           ),
                         ).animateOnPageLoad(
-                            animationsMap['stackOnPageLoadAnimation6']!),
+                            animationsMap['stackOnPageLoadAnimation7']!),
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -1017,7 +1139,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             ],
                           ),
                         ).animateOnPageLoad(
-                            animationsMap['stackOnPageLoadAnimation7']!),
+                            animationsMap['stackOnPageLoadAnimation8']!),
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -1127,7 +1249,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             ],
                           ),
                         ).animateOnPageLoad(
-                            animationsMap['stackOnPageLoadAnimation8']!),
+                            animationsMap['stackOnPageLoadAnimation9']!),
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -1236,7 +1358,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             ],
                           ),
                         ).animateOnPageLoad(
-                            animationsMap['stackOnPageLoadAnimation9']!),
+                            animationsMap['stackOnPageLoadAnimation10']!),
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -1346,7 +1468,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             ],
                           ),
                         ).animateOnPageLoad(
-                            animationsMap['stackOnPageLoadAnimation10']!),
+                            animationsMap['stackOnPageLoadAnimation11']!),
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -1456,7 +1578,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             ],
                           ),
                         ).animateOnPageLoad(
-                            animationsMap['stackOnPageLoadAnimation11']!),
+                            animationsMap['stackOnPageLoadAnimation12']!),
                       ],
                     ),
                   ),

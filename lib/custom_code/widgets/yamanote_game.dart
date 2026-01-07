@@ -342,7 +342,7 @@ class _YamanoteGameState extends State<YamanoteGame> {
     setState(() {
       currentTopic = newTopic;
     });
-    if (playCount % 3 == 0) {
+    if (playCount % 4 == 0) {
       actions.showInterstitialAdCustom();
     }
   }

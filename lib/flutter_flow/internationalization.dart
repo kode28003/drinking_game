@@ -234,6 +234,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Они игра',
       'vi': 'Trò chơi Oni',
     },
+    '8tp7x3kd': {
+      'ja': '飲みゲーメイカー',
+      'en': 'Drinking Game Maker',
+      'ko': '마시는 게이 메이커',
+      'ms': 'Pembuat Permainan Minum',
+      'ru': 'Создатель игр для выпивки',
+      'vi': 'Nhà sản xuất trò chơi uống rượu',
+    },
     'zisw65uo': {
       'ja': '山手線ゲーム',
       'en': 'Yamanote Line Game',
@@ -856,6 +864,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // fruitPage
   {
     'vqp4rw5b': {
+      'ja': 'Home',
+      'en': 'Home',
+      'ko': 'Home',
+      'ms': 'Laman Utama',
+      'ru': 'Дом',
+      'vi': 'Trang chủ',
+    },
+  },
+  // drinkingGameMakerPage
+  {
+    'b3ycmw6w': {
       'ja': 'Home',
       'en': 'Home',
       'ko': 'Home',

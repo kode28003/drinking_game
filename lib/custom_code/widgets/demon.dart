@@ -28,23 +28,6 @@ class Demon extends StatefulWidget {
 }
 
 class _DemonState extends State<Demon> with SingleTickerProviderStateMixin {
-  // final Map<String, Map<String, String>> _localizedStrings = {
-  //   'ja': {
-  //     'game_title_safe': 'セーフ！',
-  //     'game_title_fail': '残念！ハズレ！',
-  //     'game_title_start': '顔をタップしてね',
-  //     'game_over_message': '残念！おじさんが怒った！',
-  //     'play_again_button': 'もう一度',
-  //   },
-  //   'en': {
-  //     'game_title_safe': 'Safe!',
-  //     'game_title_fail': 'Too bad! It\'s a miss!',
-  //     'game_title_start': 'Tap a face!',
-  //     'game_over_message': 'Too bad! The old man got angry!',
-  //     'play_again_button': 'Play Again',
-  //   },
-  // };
-
   final Map<String, Map<String, String>> _localizedStrings = {
     'ja': {
       'game_title_safe': 'セーフ！',

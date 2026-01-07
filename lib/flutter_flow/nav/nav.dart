@@ -178,6 +178,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: FruitPageWidget.routeName,
           path: FruitPageWidget.routePath,
           builder: (context, params) => FruitPageWidget(),
+        ),
+        FFRoute(
+          name: DrinkingGameMakerPageWidget.routeName,
+          path: DrinkingGameMakerPageWidget.routePath,
+          builder: (context, params) => DrinkingGameMakerPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
