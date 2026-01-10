@@ -1,7 +1,7 @@
 # Drinking Game
 
-<img width="480" height="480" alt="aaaaaaaaaaa" src="https://github.com/user-attachments/assets/bf584e0f-d2f6-43b5-b9e6-75b0621b041a" />
-A new Flutter project.
+<img width="320" height="320" alt="aaaaaaaaaaa" src="https://github.com/user-attachments/assets/bf584e0f-d2f6-43b5-b9e6-75b0621b041a" />
+
 
 ## Getting Started
 
