@@ -66,6 +66,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': '進行中...',
       'start_game': 'ゲームを開始',
       'play_again': 'もう一度ゲーム',
+      'reveal_flop': 'フロップをめくる（3枚）',
+      'reveal_turn': 'ターンをめくる（4枚目）',
+      'reveal_river': 'リバーをめくる（5枚目）',
       'hand_ranks': {
         1: 'ハイカード',
         2: 'ワンペア',
@@ -94,6 +97,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'In Progress...',
       'start_game': 'Start Game',
       'play_again': 'Play Again',
+      'reveal_flop': 'Reveal Flop (3 cards)',
+      'reveal_turn': 'Reveal Turn (4th card)',
+      'reveal_river': 'Reveal River (5th card)',
       'hand_ranks': {
         1: 'High Card',
         2: 'One Pair',
@@ -122,6 +128,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': '进行中...',
       'start_game': '开始游戏',
       'play_again': '再玩一次',
+      'reveal_flop': '翻牌（3张）',
+      'reveal_turn': '转牌（第4张）',
+      'reveal_river': '河牌（第5张）',
       'hand_ranks': {
         1: '高牌',
         2: '一对',
@@ -151,6 +160,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'En cours...',
       'start_game': 'Démarrer le jeu',
       'play_again': 'Rejouer',
+      'reveal_flop': 'Flop (3 cartes)',
+      'reveal_turn': 'Turn (4ème carte)',
+      'reveal_river': 'River (5ème carte)',
       'hand_ranks': {
         1: 'Carte haute',
         2: 'Une paire',
@@ -180,6 +192,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'En progreso...',
       'start_game': 'Comenzar juego',
       'play_again': 'Jugar de nuevo',
+      'reveal_flop': 'Flop (3 cartas)',
+      'reveal_turn': 'Turn (4ª carta)',
+      'reveal_river': 'River (5ª carta)',
       'hand_ranks': {
         1: 'Carta alta',
         2: 'Un par',
@@ -208,6 +223,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'Läuft...',
       'start_game': 'Spiel starten',
       'play_again': 'Nochmal spielen',
+      'reveal_flop': 'Flop (3 Karten)',
+      'reveal_turn': 'Turn (4. Karte)',
+      'reveal_river': 'River (5. Karte)',
       'hand_ranks': {
         1: 'Hohe Karte',
         2: 'Ein Paar',
@@ -236,6 +254,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'Sedang berjalan...',
       'start_game': 'Mula Permainan',
       'play_again': 'Main Semula',
+      'reveal_flop': 'Flop (3 kad)',
+      'reveal_turn': 'Turn (kad ke-4)',
+      'reveal_river': 'River (kad ke-5)',
       'hand_ranks': {
         1: 'Kad Tinggi',
         2: 'Sepasang',
@@ -264,6 +285,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': '진행 중...',
       'start_game': '게임 시작',
       'play_again': '다시 하기',
+      'reveal_flop': '플롭 (3장)',
+      'reveal_turn': '턴 (4번째)',
+      'reveal_river': '리버 (5번째)',
       'hand_ranks': {
         1: '하이카드',
         2: '원페어',
@@ -292,6 +316,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'В процессе...',
       'start_game': 'Начать игру',
       'play_again': 'Играть снова',
+      'reveal_flop': 'Флоп (3 карты)',
+      'reveal_turn': 'Терн (4-я карта)',
+      'reveal_river': 'Ривер (5-я карта)',
       'hand_ranks': {
         1: 'Старшая карта',
         2: 'Одна пара',
@@ -320,6 +347,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'Đang diễn ra...',
       'start_game': 'Bắt đầu trò chơi',
       'play_again': 'Chơi lại',
+      'reveal_flop': 'Flop (3 lá)',
+      'reveal_turn': 'Turn (lá thứ 4)',
+      'reveal_river': 'River (lá thứ 5)',
       'hand_ranks': {
         1: 'Bài cao',
         2: 'Một đôi',
@@ -349,6 +379,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'In corso...',
       'start_game': 'Inizia partita',
       'play_again': 'Gioca di nuovo',
+      'reveal_flop': 'Flop (3 carte)',
+      'reveal_turn': 'Turn (4ª carta)',
+      'reveal_river': 'River (5ª carta)',
       'hand_ranks': {
         1: 'Carta alta',
         2: 'Coppia',
@@ -377,6 +410,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'Em andamento...',
       'start_game': 'Iniciar jogo',
       'play_again': 'Jogar novamente',
+      'reveal_flop': 'Flop (3 cartas)',
+      'reveal_turn': 'Turn (4ª carta)',
+      'reveal_river': 'River (5ª carta)',
       'hand_ranks': {
         1: 'Carta alta',
         2: 'Um par',
@@ -405,6 +441,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'قيد التنفيذ...',
       'start_game': 'ابدأ اللعبة',
       'play_again': 'العب مرة أخرى',
+      'reveal_flop': 'فلوب (3 أوراق)',
+      'reveal_turn': 'تيرن (الورقة 4)',
+      'reveal_river': 'ريفر (الورقة 5)',
       'hand_ranks': {
         1: 'أعلى ورقة',
         2: 'زوج',
@@ -433,6 +472,9 @@ class _PokerTestState extends State<PokerTest> {
       'in_progress': 'प्रगति पर...',
       'start_game': 'खेल शुरू करें',
       'play_again': 'फिर से खेलें',
+      'reveal_flop': 'फ्लॉप (3 पत्ते)',
+      'reveal_turn': 'टर्न (4वां पत्ता)',
+      'reveal_river': 'रिवर (5वां पत्ता)',
       'hand_ranks': {
         1: 'ऊँचा पत्ता',
         2: 'एक जोड़ी',
@@ -489,6 +531,7 @@ class _PokerTestState extends State<PokerTest> {
   String _gameMessage = '';
   bool _isLoading = false;
   int _startCount = 0;
+  int _cardRevealStage = 0; // 0: 未開始, 3: フロップ, 4: ターン, 5: リバー
 
   String _getTranslatedText(String key) {
     final String languageCode = Localizations.localeOf(context).languageCode;
@@ -539,6 +582,7 @@ class _PokerTestState extends State<PokerTest> {
       _gameStarted = false;
       _isLoading = false;
       _communityCards = [];
+      _cardRevealStage = 0;
       _players = List.generate(
         _playerCount,
         (index) =>
@@ -568,13 +612,13 @@ class _PokerTestState extends State<PokerTest> {
     if (!mounted) return;
     setState(() {
       _gameStarted = true;
+      _cardRevealStage = 0;
+      _isLoading = false;
       _gameMessage = _getTranslatedText('cards_dealt');
     });
 
-    await Future.delayed(const Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 500));
     _updateProbabilities();
-
-    await _dealCommunityCards();
   }
 
   // プレイヤーの状態をリセットする
@@ -586,47 +630,65 @@ class _PokerTestState extends State<PokerTest> {
     }
   }
 
-  // コミュニティカードを段階的に配る
-  Future<void> _dealCommunityCards() async {
-    _communityCards = [];
-    if (!mounted) return;
+  // 次のカードをめくる
+  Future<void> _revealNextCards() async {
+    if (!mounted || _cardRevealStage >= 5) return;
+
     setState(() {
-      _gameMessage = _getTranslatedText('flop');
+      _isLoading = true;
     });
-    await Future.delayed(const Duration(milliseconds: 1500));
-    for (int i = 0; i < 3; i++) {
+
+    if (_cardRevealStage == 0) {
+      // フロップ：3枚を一度にめくる
+      setState(() {
+        _gameMessage = _getTranslatedText('flop');
+      });
+      await Future.delayed(const Duration(milliseconds: 500));
+
+      for (int i = 0; i < 3; i++) {
+        if (!mounted) return;
+        setState(() {
+          _communityCards.add(_deck.removeLast());
+        });
+        await Future.delayed(const Duration(milliseconds: 300));
+      }
+      _cardRevealStage = 3;
+      _updateProbabilities();
+    } else if (_cardRevealStage == 3) {
+      // ターン：4枚目をめくる
+      setState(() {
+        _gameMessage = _getTranslatedText('turn');
+      });
+      await Future.delayed(const Duration(milliseconds: 500));
+
       if (!mounted) return;
       setState(() {
         _communityCards.add(_deck.removeLast());
       });
+      _cardRevealStage = 4;
       _updateProbabilities();
+    } else if (_cardRevealStage == 4) {
+      // リバー：5枚目をめくる
+      setState(() {
+        _gameMessage = _getTranslatedText('river');
+      });
       await Future.delayed(const Duration(milliseconds: 500));
+
+      if (!mounted) return;
+      setState(() {
+        _communityCards.add(_deck.removeLast());
+      });
+      _cardRevealStage = 5;
+      _updateProbabilities();
+
+      await Future.delayed(const Duration(milliseconds: 1000));
+      _findLoserAndDisplay();
     }
 
     if (!mounted) return;
     setState(() {
-      _gameMessage = _getTranslatedText('turn');
+      _isLoading = false;
     });
-    await Future.delayed(const Duration(milliseconds: 1500));
-    if (!mounted) return;
-    setState(() {
-      _communityCards.add(_deck.removeLast());
-    });
-    _updateProbabilities();
-
-    if (!mounted) return;
-    setState(() {
-      _gameMessage = _getTranslatedText('river');
-    });
-    await Future.delayed(const Duration(milliseconds: 1500));
-    if (!mounted) return;
-    setState(() {
-      _communityCards.add(_deck.removeLast());
-    });
-    _updateProbabilities();
-
-    await Future.delayed(const Duration(milliseconds: 2000));
-    _findLoserAndDisplay();
   }
 
   // 各プレイヤーの勝率を更新する
@@ -1096,64 +1158,100 @@ class _PokerTestState extends State<PokerTest> {
   Widget _buildControlPanel() {
     return Column(
       children: [
-        SizedBox(
-          width: 200,
-          child: DropdownButtonFormField<int>(
-            value: _playerCount,
-            decoration: InputDecoration(
-              border: const OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(12)),
-                borderSide: BorderSide(color: Colors.black),
-              ),
-              labelText: _getTranslatedText('player_count_label'),
-              labelStyle: const TextStyle(color: Colors.black),
-              filled: true,
-              fillColor: Colors.white,
-            ),
-            dropdownColor: Colors.white,
-            items: List.generate(9, (index) => index)
-                .map<DropdownMenuItem<int>>((int value) {
-              return DropdownMenuItem<int>(
-                value: value,
-                child: Text(
-                  '$value ${_getTranslatedText('player')}',
-                  style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                  ),
+        if (!_gameStarted)
+          SizedBox(
+            width: 200,
+            child: DropdownButtonFormField<int>(
+              value: _playerCount,
+              decoration: InputDecoration(
+                border: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  borderSide: BorderSide(color: Colors.black),
                 ),
-              );
-            }).toList(),
-            onChanged: (int? newValue) {
-              if (newValue != null) {
-                setState(() {
-                  _playerCount = newValue;
-                  _resetGame();
-                });
-              }
-            },
-          ),
-        ),
-        const SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: _isLoading ? null : _startGame,
-          style: ElevatedButton.styleFrom(
-            minimumSize: const Size(double.infinity, 50),
-            backgroundColor: const Color(0xFF16A34A),
-            foregroundColor: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
+                labelText: _getTranslatedText('player_count_label'),
+                labelStyle: const TextStyle(color: Colors.black),
+                filled: true,
+                fillColor: Colors.white,
+              ),
+              dropdownColor: Colors.white,
+              items: List.generate(9, (index) => index)
+                  .map<DropdownMenuItem<int>>((int value) {
+                return DropdownMenuItem<int>(
+                  value: value,
+                  child: Text(
+                    '$value ${_getTranslatedText('player')}',
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.black,
+                    ),
+                  ),
+                );
+              }).toList(),
+              onChanged: (int? newValue) {
+                if (newValue != null) {
+                  setState(() {
+                    _playerCount = newValue;
+                    _resetGame();
+                  });
+                }
+              },
             ),
           ),
-          child: Text(
-            _isLoading
-                ? _getTranslatedText('in_progress')
-                : (_gameStarted
-                    ? _getTranslatedText('play_again')
-                    : _getTranslatedText('start_game')),
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        const SizedBox(height: 20),
+        if (!_gameStarted)
+          ElevatedButton(
+            onPressed: _isLoading ? null : _startGame,
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(double.infinity, 50),
+              backgroundColor: const Color(0xFF16A34A),
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+            child: Text(
+              _getTranslatedText('start_game'),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
           ),
-        ),
+        if (_gameStarted && _cardRevealStage < 5)
+          ElevatedButton(
+            onPressed: _isLoading ? null : _revealNextCards,
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(double.infinity, 50),
+              backgroundColor: const Color(0xFF2563EB),
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+            child: Text(
+              _isLoading
+                  ? _getTranslatedText('in_progress')
+                  : (_cardRevealStage == 0
+                      ? _getTranslatedText('reveal_flop')
+                      : _cardRevealStage == 3
+                          ? _getTranslatedText('reveal_turn')
+                          : _getTranslatedText('reveal_river')),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ),
+        if (_gameStarted && _cardRevealStage == 5)
+          ElevatedButton(
+            onPressed: _isLoading ? null : _resetGame,
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(double.infinity, 50),
+              backgroundColor: const Color(0xFF16A34A),
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+            child: Text(
+              _getTranslatedText('play_again'),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ),
       ],
     );
   }

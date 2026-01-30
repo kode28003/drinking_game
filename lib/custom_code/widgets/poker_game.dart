@@ -6,6 +6,7 @@ import 'index.dart'; // Imports other custom widgets
 import '/custom_code/actions/index.dart'; // Imports custom actions
 import '/flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
@@ -607,7 +608,7 @@ class _PokerGameState extends State<PokerGame>
     return onePairCards;
   }
 
-  void startGame() {
+  Future<void> startGame() async {
     if (tapping == false) {
       setState(() {
         tapping = true;
@@ -626,14 +627,14 @@ class _PokerGameState extends State<PokerGame>
       _controller.forward(from: 0);
 
       dealCards();
-      Future.delayed(Duration(seconds: 6), () {
-        determineWinner();
+      Future.delayed(Duration(seconds: 6), () async {
+        await determineWinner();
         tapping = false;
       });
     } else {}
   }
 
-  void determineWinner() {
+  Future<void> determineWinner() async {
     // int score1 = evaluateHand([...player1Hand, ...board]);
     // int score2 = evaluateHand([...player2Hand, ...board]);
     int score1 = pokerRank(player1Hand, board, 1);
@@ -690,6 +691,13 @@ class _PokerGameState extends State<PokerGame>
             ? BoxDecoration(
                 border: Border.all(color: Colors.yellow, width: 4),
                 borderRadius: BorderRadius.circular(8),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.yellow.withOpacity(0.6),
+                    blurRadius: 20,
+                    spreadRadius: 3,
+                  ),
+                ],
               )
             : null,
         child: Image.asset(
@@ -708,7 +716,11 @@ class _PokerGameState extends State<PokerGame>
           },
         ),
       ),
-    );
+    ).animate(target: revealed ? 1 : 0)
+      .fadeIn(duration: 400.ms)
+      .scale(begin: Offset(0.8, 0.8), end: Offset(1.0, 1.0), duration: 400.ms, curve: Curves.elasticOut)
+      .then(delay: 200.ms)
+      .shimmer(duration: 1000.ms, color: Colors.white.withOpacity(0.3));
   }
 
   @override
@@ -829,9 +841,20 @@ class _PokerGameState extends State<PokerGame>
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: startGame,
-            child: Text('Play'),
+            child: Text(
+              'Play',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
             style: ElevatedButton.styleFrom(
-              minimumSize: Size(120, 40),
+              backgroundColor: Color(0xFF0080FF),
+              minimumSize: Size(120, 50),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
             ),
           ),
           // 結果表示
@@ -843,7 +866,11 @@ class _PokerGameState extends State<PokerGame>
                 fontSize: 26,
                 color: Colors.yellow,
                 fontWeight: FontWeight.bold),
-          ),
+          ).animate(target: result.isNotEmpty ? 1 : 0)
+            .fadeIn(duration: 300.ms)
+            .scale(begin: Offset(0.5, 0.5), end: Offset(1.0, 1.0), duration: 500.ms, curve: Curves.elasticOut)
+            .then(delay: 100.ms)
+            .shimmer(duration: 1500.ms, color: Colors.white.withOpacity(0.5)),
         ],
       ),
     );

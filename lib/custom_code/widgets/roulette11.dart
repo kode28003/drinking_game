@@ -6,6 +6,7 @@ import 'index.dart'; // Imports other custom widgets
 import '/custom_code/actions/index.dart'; // Imports custom actions
 import '/flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
@@ -1115,7 +1116,7 @@ class _Roulette11State extends State<Roulette11>
     });
   }
 
-  void _spinRoulette() {
+  Future<void> _spinRoulette() async {
     if (_isSpinning || _selectedOptions.isEmpty) return;
 
     setState(() {
